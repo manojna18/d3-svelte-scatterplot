@@ -93,12 +93,11 @@
 
 </script>
 
-<main>
-  <h2>National per capita income vs Labor force participation of married women with advanced education (2022)</h2>
-</main>
+
 
 <section>
   <div class="sticky">
+      <h2>Per capita income vs. Labor Force Participation of married women with advanced education (2022)</h2>
     <div class="chart-container" bind:clientWidth={width}>
       <!-- svelte-ignore a11y-no-static-element-interactions -->
       <svg on:mouseleave={() => hoveredData = null} {width} {height} >
@@ -122,7 +121,7 @@
               on:mouseover={() => {currentStep >= 2 ? hoveredData = item : null;
                 console.log(hoveredData);
               } }
-              on:focus={() => (currentStep >= 2 ? hoveredData = d : null)}
+              on:focus={() => (currentStep >= 2 ? hoveredData = item : null)}
               tabindex="0"
             />
           {/each}
